@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=AC Controller
+Comment=Control your Gree-compatible air conditioners
+Exec=@LAUNCHER@
+Icon=@ICON@
+Terminal=false
+Categories=Utility;GTK;
+StartupNotify=true
+StartupWMClass=io.github.greeclimate.Controller.Desktop

@@ -1,0 +1,15 @@
+[Unit]
+Description=Gree AC Controller top-bar menu
+PartOf=graphical-session.target
+After=graphical-session.target gree-ac.service
+Wants=gree-ac.service
+
+[Service]
+Type=simple
+Environment=@TYPELIB_ENV@
+ExecStart=@PYTHON@ -m gree_ac desktop --indicator
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Gree AC Controller background service
+
+[Service]
+Type=dbus
+BusName=io.github.greeclimate.Controller
+ExecStart=@PYTHON@ -m gree_ac service
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target
